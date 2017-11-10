@@ -1,0 +1,71 @@
+.is-video-container
+  max-width: 100%
+  overflow: hidden
+  video
+    max-width: 100%
+  > .pop-up
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 2
+    > video
+      position: absolute
+      top: 50%
+      left: 50%
+      max-width: 60%
+      transform: translate(-50%, -50%)
+      box-shadow: $shadow
+    > .video-controls
+       position: absolute
+       max-width: 60%
+       max-height: 4%
+       .player-control
+         flex-basis: 87%
+         &:nth-child(4)
+           flex-basis: 1%
+           text-align: center
+         &:nth-child(odd)
+           flex-basis: 1%
+           text-align: center
+
+
+.video-controls
+  display: flex
+  width: 100%
+  height: 100%
+  color: white
+  background-color: $lightBlack
+  margin-top: -2px
+  .is-progress-bar-container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 18px
+    width: 100%
+    .is-progress-bar-background
+        height: 0.2em
+        background-color: $lightBlack
+        border-radius: 0.2em
+        .is-progress-bar
+          width: 0%
+          height: 100%
+          background-color: $red
+          border-radius: 0.2em
+          transition: 750ms
+  .player-control
+    display: flex
+    height: 100%
+    flex: 1 0 70%
+    justify-content: center
+    user-select: none
+    align-items: center
+    .material-icons
+      font-size: 18px
+    &:nth-child(odd)
+      flex-basis: 10%
+      cursor: pointer
+    &:nth-child(4)
+      flex-basis: 10%
+      cursor: pointer

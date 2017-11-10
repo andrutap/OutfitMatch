@@ -1,0 +1,52 @@
+.form
+  .row.is-gapless
+    .tile
+      padding-right: $gap
+
+.modal
+  .form
+    legend
+      background: transparent
+      color: black
+
+.nav
+  .button
+    margin-bottom: 0
+
+small
+  color: $grey
+  text-align: justify
+  display: block
+  .instructions-head
+    color: $grey
+    font-weight: 700
+
+.bordered
+  border: thin solid black
+
+.hidden
+  &.in-handheld
+    +handheld
+      display: none
+  &.in-desktop
+    display: none
+    +mobile
+      display: block
+
+.loader
+  width: 4rem
+  height: 4rem
+  border-radius: 50%
+  background: white
+  border:
+    top: .25rem solid white
+    right: .25rem solid white
+    bottom: .25rem solid black
+    left: .25rem solid black
+  animation: loader 1.2s infinite linear
+  position: absolute
+  top: 50%
+  left: 50%
+
+.invert
+  transform: rotate(-180deg)
